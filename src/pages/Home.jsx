@@ -12,7 +12,6 @@ const Home = () => {
   const [isTyping, setIsTyping] = useState(false); // To track if the user has started typing
 
   const URI = import.meta.env.VITE_API_URL; // Use the environment variable
-  console.log(URI);
 
   // Function to fetch address suggestions from Nominatim API
   const fetchAddressSuggestions = async (query) => {
