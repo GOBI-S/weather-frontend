@@ -86,6 +86,13 @@ const Home = () => {
 
   return (
     <div id="box">
+   <div className="video-container">
+      <video autoPlay muted loop className="background-video">
+        <source src="/small.mp4" type="video/mp4" />
+        {/* Fallback content for unsupported browsers */}
+        Your browser does not support the video tag.
+      </video>
+    </div>
       <form id="userForm" onSubmit={(e) => e.preventDefault()}>
         <div className="input-group">
           <input
@@ -147,6 +154,9 @@ const Home = () => {
         </button>
       </form>
     </div>
+
+
+    
   );
 };
 

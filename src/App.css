@@ -2,43 +2,49 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #0b0b0f; /* Dark night sky background */
-  color: #e0e0e0; /* Light text color */
+  font-family: "Arial", sans-serif;
+  color: #e0e0e0; 
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: transparent;
 }
 
 /* Container Styling */
 #box {
-  background: rgba(0, 0, 0, 0.8); /* Slightly transparent dark background */
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-  width: 90%;
-  max-width: 600px;
+  width: 650px;
 }
 
 /* Form Styling */
 form {
+  width: 650px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 /* Input Group Styling */
+#locationmap {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+}
 .input-group {
   display: flex;
-  align-items: center;
+  width: 650px;
   margin-bottom: 20px;
 }
-.input{
-  background-color: #1a1a1d; /* Dark background for input */
+.input {
+  background-color: #1a1a1d; 
   border: 1px solid #333;
   border-radius: 5px;
-  color: #e0e0e0; /* Light text color */
+  color: #e0e0e0; 
   padding: 10px;
   margin-right: 10px;
   flex: 1;
@@ -46,14 +52,14 @@ form {
 
 .input:focus {
   outline: none;
-  border-color: #4a4a6a; /* Highlight border on focus */
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Focus shadow */
+  border-color: #4a4a6a;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
 }
 
 /* Button Styling */
 .button {
-  background-color: #333; /* Dark button background */
-  color: #e0e0e0; /* Light text color */
+  background-color: #333;
+  color: #e0e0e0;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -63,78 +69,110 @@ form {
 }
 
 .button:hover {
-  background-color: #555; /* Slightly lighter on hover */
+  background-color: #555; 
 }
 
 .button:active {
-  transform: scale(0.98); /* Slight scale down effect on click */
+  transform: scale(0.98); 
 }
 
 /* Suggestions Box Styling */
 #suggestions {
   margin-top: -20px;
-  background: rgba(0, 0, 0, 0.9); /* Dark background for suggestions */
+  background: rgba(0, 0, 0, 0.9);
   border: 1px solid #333;
   border-radius: 5px;
   max-height: 150px;
   overflow-y: auto;
   position: absolute;
-  width:590px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  flex: 1.5;
 }
-#addressInput{
-  width: 570px;
-  background-color: #1a1a1d; /* Dark background for input */
+#addressInput {
+  background-color: #1a1a1d; 
   border: 1px solid #333;
   border-radius: 5px;
-  color: #e0e0e0; /* Light text color */
+  color: #e0e0e0; 
   padding: 10px;
   margin-bottom: 20px;
   margin-right: 10px;
-  flex: 1;
+  flex: 1.5;
 }
 .suggestion-item {
-  
-  width:570px;
+  flex: 1.5;
   padding: 10px;
-  color: #e0e0e0; /* Light text color */
+  color: #e0e0e0;
   cursor: pointer;
 }
 
 .suggestion-item:hover {
-  background-color: #444; /* Highlight on hover */
+  background-color: #444; 
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  #box {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .input, .button {
-    width: 100%;
-  }
-
-  .input-group {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-/* Adding Starry Effect */
-body::before {
-  content: '';
+.background-video {
+  z-index:-1;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Starry background */
-  opacity: 0.3;
-  pointer-events: none;
+  object-fit: cover; 
 }
-#lanch{
-  padding-top: 5px;
-  margin-top: 50px;
+#launch {
+  width: fit-content;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+  #box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    padding: 15px;
+  }
+  #suggestions {
+    margin-top: 40px;
+    flex: 1;
+  }
+  .suggestion-item {
+    flex: 1;
+  }
+
+  .input-group {
+    width: 400px;
+    gap: 10px;
+  }
+  #locationmap {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 470px) {
+  #box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    padding: 15px;
+  }
+  #suggestions {
+    margin-top: 40px;
+    flex: 1;
+  }
+  .suggestion-item {
+    flex: 1;
+  }
+
+  .input-group {
+    width: 350px;
+    gap: 10px;
+  }
+  #locationmap {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+  }
 }
