@@ -78,7 +78,7 @@ form {
 
 /* Suggestions Box Styling */
 #suggestions {
-  margin-top: -20px;
+  margin-top: 36px;
   background: rgba(0, 0, 0, 0.9);
   border: 1px solid #333;
   border-radius: 5px;
@@ -132,7 +132,7 @@ form {
     padding: 15px;
   }
   #suggestions {
-    margin-top: 40px;
+    margin-top: 36px;
     flex: 1;
   }
   .suggestion-item {
@@ -159,7 +159,7 @@ form {
     padding: 15px;
   }
   #suggestions {
-    margin-top: 40px;
+    margin-top: 36px;
     flex: 1;
   }
   .suggestion-item {
