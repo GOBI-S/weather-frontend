@@ -75,10 +75,14 @@ const Home = () => {
         address: address,
       });
       alert("Email and address added successfully!");
-      console.log("Success:", response.data);
+      // console.log("Success:", response.data);
     } catch (error) {
-      alert("Failed to submit. Try again.");
-      console.error("Error:", error.message);
+      if(error.status==401){
+        alert("Your Email is alredy Added")
+      }
+      else if(error.status==400){
+        alert("Can`t add your Email or check your email")
+      }
     } finally {
       setIsSubmitting(false); // Reset the button text and state
     }
