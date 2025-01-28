@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
-  color: #e0e0e0; 
+  color: #e0e0e0;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -41,10 +41,10 @@ form {
   margin-bottom: 20px;
 }
 .input {
-  background-color: #1a1a1d; 
+  background-color: #1a1a1d;
   border: 1px solid #333;
   border-radius: 5px;
-  color: #e0e0e0; 
+  color: #e0e0e0;
   padding: 10px;
   margin-right: 10px;
   flex: 1;
@@ -53,7 +53,7 @@ form {
 .input:focus {
   outline: none;
   border-color: #4a4a6a;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 /* Button Styling */
@@ -69,11 +69,11 @@ form {
 }
 
 .button:hover {
-  background-color: #555; 
+  background-color: #555;
 }
 
 .button:active {
-  transform: scale(0.98); 
+  transform: scale(0.98);
 }
 
 /* Suggestions Box Styling */
@@ -89,10 +89,10 @@ form {
   flex: 1.5;
 }
 #addressInput {
-  background-color: #1a1a1d; 
+  background-color: #1a1a1d;
   border: 1px solid #333;
   border-radius: 5px;
-  color: #e0e0e0; 
+  color: #e0e0e0;
   padding: 10px;
   margin-bottom: 20px;
   margin-right: 10px;
@@ -106,17 +106,17 @@ form {
 }
 
 .suggestion-item:hover {
-  background-color: #444; 
+  background-color: #444;
 }
 
 .background-video {
-  z-index:-1;
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 #launch {
   width: fit-content;
@@ -175,4 +175,46 @@ form {
     display: flex;
     flex-direction: column;
   }
+}
+/* Suggestion box container */
+.listaddress {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  max-height: 20rem;
+  max-width: 28rem;
+  overflow-y: auto;
+  border-radius: 0.75rem; /* Rounded corners for a softer look */
+  border: 1px solid #333; /* Darker border for contrast */
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly lighter background */
+  padding: 1rem;
+}
+
+/* Hover effect for suggestions box */
+.listaddress:hover {
+  box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+/* Individual suggestion items */
+.items {
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #555; /* Slightly lighter background */
+  border-radius: 0.5rem; /* Rounded borders for individual items */
+  color: #fff; /* White text for better contrast */
+  font-size: 1rem; /* Readable font size */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}
+
+/* Hover effect for individual items */
+.items:hover {
+  background-color: #666; /* Lighter background on hover */
+  transform: scale(1.02); /* Slight scale effect for emphasis */
+}
+
+/* Active state for selected item */
+.items:active {
+  background-color: #444; /* Darker background when clicked */
+  transform: scale(1); /* Reset scale on click */
 }
